@@ -1,22 +1,22 @@
-## 简介
+# 简介
 
 自用的移动端活动专题模板，基于官方模板 [webpack-simple](https://github.com/vuejs-templates/webpack-simple) 做了如下改动：
 
-- 添加 Less 支持
+- [x]添加 Less 支持
 
-- 添加移动端支持和 Bootstrap 样式
+- [x]添加移动端支持和 Bootstrap 样式
 
-- 添加路由功能，配置文件是 `routers.js`
+- [x]添加路由功能，配置文件是 `routers.js`
 
-- 添加自定义组件
+- [x]添加自定义组件
 
-## 文档结构
+# 文档结构
 
 ![](tree.png)
 
-## 安装
+# 安装
 
-#### 使用淘宝 NPM 镜像
+### 使用淘宝 NPM 镜像
 
 建议使用淘宝 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:
 
@@ -30,7 +30,7 @@ $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 $ cnpm install [name]
 ```
 
-#### 命令行
+### 命令行
 
 ``` bash
 # 安装依赖
@@ -43,19 +43,19 @@ npm run dev
 npm run build
 ```
 
-## 组件
+# 组件
 
 尝试写了几个组件，待后续完善:)
 
-#### m-nav
+### m-nav
 
 底部导航
 
-#### m-register
+### m-register
 
 带输入框的弹出窗口
 
-#### m-tab
+### m-tab
 
 选项卡
 
