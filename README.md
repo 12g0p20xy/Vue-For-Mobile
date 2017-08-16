@@ -2,13 +2,13 @@
 
 自用的移动端活动专题模板，基于官方模板 [webpack-simple](https://github.com/vuejs-templates/webpack-simple) 做了如下改动：
 
-- [x]添加 Less 支持
+- [x] 添加 Less 支持
 
-- [x]添加移动端支持和 Bootstrap 样式
+- [x] 添加移动端支持和 Bootstrap 样式
 
-- [x]添加路由功能，配置文件是 `routers.js`
+- [x] 添加路由功能，配置文件是 `routers.js`
 
-- [x]添加自定义组件
+- [x] 添加自定义组件
 
 # 文档结构
 
