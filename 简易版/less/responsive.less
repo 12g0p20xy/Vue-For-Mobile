@@ -1,0 +1,18 @@
+// 媒体查询（建议使用 em 作为单位）
+// 看这篇：http://www.w3cplus.com/css/media-query-units.html
+// 用法：
+// p{
+// 	 color: red;
+// 	   @media @screen-md {
+// 		 color: blue;
+// 	   }
+// }
+
+// 桌面显示器 (≥992px)
+@screen-lg: ~"only screen and (min-width: 62em)";
+
+// 平板 (≥768px)
+@screen-md: ~"only screen and (min-width: 48em) and (max-width: 62em)";
+
+// 手机 (<768px)
+@screen-sm: ~"only screen and (min-width: 40em) and (max-width: 48em)";

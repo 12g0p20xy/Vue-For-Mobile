@@ -1,0 +1,11 @@
+{
+  "name": "HuiJuWang",
+  "version": "0.0.1",
+  "description": "The build process of my website with Gulp.js",
+  "private": true,
+  "author": "monad",
+  "devDependencies": {
+    "gulp-clean": "^0.3.2",
+    "require-dir": "^0.3.0"
+  }
+}

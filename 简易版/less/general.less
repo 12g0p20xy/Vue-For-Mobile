@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+/* Reset Styles
+***********************/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary,time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main,menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+/* General
+***********************/
+
+// 移动端改变盒模型
+*{
+	@media @screen-sm {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+		-webkit-tap-highlight-color: transparent;
+	}
+}
+input[type="submit"], input[type="reset"], input[type="button"], select, button {
+	-webkit-appearance: none;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+	-ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+body{
+	color: @font-color;
+	background: @body-bg;
+}
+body, button, input, select, textarea{
+	font: normal @font-size @font-family;
+	line-height: @line-height;
+}
+a{
+	color: @link;
+	&:hover{
+		color: lighten(@link, 20%);
+		> img{
+			.opacity(.8);
+		}
+	}
+	&:active{
+		color: darken(@link, 10%);
+	}
+	outline: none;
+	text-decoration: none;
+}
+p{
+	font-size: @font-size;
+	text-align: justify;
+	word-break: break-all;
+	margin-bottom: .5em;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.container{
+	position: relative;
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	@media @screen-md {
+		width: 750px;
+	}
+	@media @screen-sm {
+		width: 94%;
+	}
+}
+img{
+	display: block;
+	width: 100%;
+}
+
+// 输入框和按钮们
+.input-reset{
+	display: block; // 修复ie7的偏移bug
+	margin: 1em auto;
+	width: 10em;
+	height: 2em; // 消除不同浏览器上的高度差异
+	line-height: 2em;
+	padding: 0;
+	border: none;
+	outline: none;
+	.border-radius(2px);
+	@media @screen-sm {
+		width: 100%;
+	}
+}
+input[type="text"], input[type="number"], textarea{
+	&:extend(.input-reset);
+	color: @font-color;
+	font-size: @btn-fz;
+	text-indent: .5em;
+}
+textarea{
+	height: auto;
+	resize: vertical;
+	overflow-y: auto;
+}
+.btn, a.btn{
+	&:extend(.input-reset);
+	text-align: center;
+	color: @btn-color;
+	font-size: @btn-fz;
+	font-weight: bold;
+	line-height: 2; // a标签文字居中
+	background: @btn-bg;
+	cursor: pointer;
+	&:active{
+		background: darken(@btn-bg, 10%);
+	}
+}

@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+// mixins
+
+.inline-block() {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: top;
+}
+
+.opacity(@opacity) {
+	opacity: @opacity;
+	@opacity-ie: @opacity*100;
+	filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+.clearfix() {
+	&:before, &:after{content:""; display:table;}
+	&:after{clear:both;}
+	*zoom:1;
+}
+
+// 文本截取
+// 单行 .ellipsis(1);
+// 多行 .ellipsis(3);
+.ellipsis(@lines) when (@lines >= 2) {
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: @lines;
+	-webkit-box-orient: vertical;
+}
+.ellipsis(@lines) when (@lines = 1) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.transition-all() {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+  -o-transition: @transition;
+  transition: @transition;
+}
+
+.border-radius(@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+

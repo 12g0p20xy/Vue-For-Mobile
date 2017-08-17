@@ -1,0 +1,59 @@
+@import "mixin";
+@import "responsive";
+@import "general";
+
+// Variables
+
+// 主题色
+@primary-color: #16a958;
+@secondary-color: #FA7021;
+
+// 主间距
+@margin: 30px;
+@padding: 15px;
+
+// 背景
+@body-bg: #fff;
+
+// 链接
+@link: #333;
+
+// 字体
+@font-color: #333;
+@font-size: 16px;
+@line-height: 1.7;
+@font-family: ~"'helvetica neue', tahoma, 'hiragino sans gb', stheiti, 'wenquanyi micro hei', \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif";
+
+// 按钮
+@btn-color: #fff;
+@btn-fz: 16px;
+@btn-bg: #444965;
+
+.wrap {
+  padding: 0 4%;
+}
+
+h3{
+	font-size: 24px;
+  margin: .6em 0;
+}
+
+nav{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #333;
+  a{
+    display: block;
+    float: left;
+    width: 25%;
+    padding: .8em 0;
+    text-align: center;
+    color: #eee;
+    text-decoration: none;
+    &:hover{
+      background: lighten(#333, 10%);
+    }
+  }
+}
