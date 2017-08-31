@@ -53,9 +53,23 @@ npm run build
 
 底部导航
 
-### m-register
+### m-message
 
-带输入框的弹出窗口
+提示框
+
+```html
+<m-message type="alert">
+  <button class="btn">Alert</button>
+</m-message>
+
+<m-message
+  type="confirm"
+  title="等待确认"
+  content="要执行操作吗？"
+  @confirm="msgEvent">
+  <button class="btn">Confirm</button>
+</m-message>
+```
 
 ### m-tab
 
@@ -68,6 +82,14 @@ npm run build
   <m-tabcon label="项目3">内容3</m-tabcon>
 </m-tab>
 ```
+
+### m-register
+
+带输入框的弹出窗口
+
+### m-roulette
+
+转盘抽奖
 
 ## 参考链接
 

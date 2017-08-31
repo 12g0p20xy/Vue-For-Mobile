@@ -7,7 +7,7 @@
 
 <template>
 
-  <div class="m-alert">
+  <div class="m-register">
 
     <!-- 确认按钮 -->
     <button
@@ -70,52 +70,54 @@ export default {
 </script>
 
 <style lang="less">
-button {
-  margin: 0 auto;
-  width: 100%;
-}
-.layer {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,.6);
-  z-index: 99;
-  &.active{
-    display: block;
-    .signup-box{
-      animation: show .3s forwards;
-    }
+.m-register {
+  button {
+    width: 100%;
   }
-  .signup-box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 30px;
-    border: 1px solid #ddd;
-    background: #fff;
-    box-shadow: 0 6px 30px #555;
-    transform: translate(-50%, -50%) scale(5);
-    opacity: 0;
-    .input-group{
-      margin-bottom: 1em;
-      label{
-        display: block;
-      }
-      input{
-        width: 15em;
-      }
-    }
-    .close-btn{
+  .layer {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 99;
+    &.active{
       display: block;
-      width: 100%;
-      padding: .5em;
-      text-align: center;
+      .signup-box{
+        animation: show .3s forwards;
+      }
+    }
+    .signup-box{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 30px;
+      border: 1px solid #ddd;
+      background: #fff;
+      box-shadow: 0 6px 30px #555;
+      transform: translate(-50%, -50%) scale(5);
+      opacity: 0;
+      .input-group{
+        margin-bottom: 1em;
+        label{
+          display: block;
+        }
+        input{
+          width: 15em;
+        }
+      }
+      .close-btn{
+        display: block;
+        width: 100%;
+        padding: .5em;
+        text-align: center;
+      }
     }
   }
 }
+
 @keyframes show{
   to {
     transform: translate(-50%, -50%) scale(1);

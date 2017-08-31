@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <link rel="stylesheet" href="/css/style.min.css">
-    <script src="https://unpkg.com/vue"></script>
+    <link href="https://cdn.bootcss.com/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
     <title>index</title>
   </head>
   <body>
@@ -16,9 +17,20 @@
         <a href="/game.html">开始游戏</a>
         <a href="/rank.html">查看排名</a>
       </nav>
-    </div>
-    <div id="index" class="wrap">
-      <h3>首页</h3>
+
+      <div id="index" class="wrap">
+        <h3>首页</h3>
+        <m-message type="alert">
+          <button class="btn">Alert</button>
+        </m-message>
+        <m-message
+          type="confirm"
+          title="等待确认"
+          content="要执行操作吗？"
+          @confirm="msgEvent">
+          <button class="btn">Confirm</button>
+        </m-message>
+      </div>
     </div>
     <script src="/js/global.min.js"></script>
   </body>

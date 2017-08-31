@@ -1,11 +1,24 @@
 {
-  "name": "HuiJuWang",
+  "name": "game",
   "version": "0.0.1",
   "description": "The build process of my website with Gulp.js",
   "private": true,
   "author": "monad",
   "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "gulp-babel": "^7.0.0",
     "gulp-clean": "^0.3.2",
     "require-dir": "^0.3.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-header": "^1.8.9",
+    "gulp-less": "^3.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
   }
 }

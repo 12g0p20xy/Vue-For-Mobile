@@ -1,15 +1,16 @@
-var gulp = require('gulp');
-var less = require('gulp-less');
-var browserSync = require('browser-sync').create();
-var header = require('gulp-header');
-var cleanCSS = require('gulp-clean-css');
-var rename = require("gulp-rename");
-var uglify = require('gulp-uglify');
-var clean = require('gulp-clean');
-var pkg = require('./package.json');
+const gulp = require('gulp');
+const less = require('gulp-less');
+const browserSync = require('browser-sync').create();
+const header = require('gulp-header');
+const cleanCSS = require('gulp-clean-css');
+const rename = require("gulp-rename");
+const uglify = require('gulp-uglify');
+const clean = require('gulp-clean');
+const pkg = require('./package.json');
+const babel = require('gulp-babel');
 
 // Set the banner content
-var banner = ['/*!\n',
+const banner = ['/*!\n',
     ' * Copyright ' + (new Date()).getFullYear(), ' by <%= pkg.author %>\n',
     ' */\n',
     ''
@@ -40,6 +41,9 @@ gulp.task('minify-css', ['less'], function() {
 // Minify JS
 gulp.task('minify-js', function() {
     return gulp.src('js/global.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
