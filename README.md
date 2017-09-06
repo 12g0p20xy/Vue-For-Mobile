@@ -10,21 +10,21 @@
 
 - [x] 添加自定义组件
 
-- [] 添加 Vuex
+- [x] 添加 Vuex
 
 ![](./demo/GIF.gif)
 
-# 文档结构
+## 文档结构
 
 ![](./demo/tree.png)
 
-# 新增【简易版】
+## 新增【简易版】
 
 不使用 Webpack 打包，方便后端直接修改 HTML 文件；
 
 【简易版】使用 Gulp 压缩，支持 ES6 语法。
 
-# 安装
+## 安装
 
 ### 使用淘宝 npm 镜像
 
@@ -53,7 +53,7 @@ npm run dev
 npm run build
 ```
 
-# 可用组件
+## 可用组件
 
 ### m-nav
 
