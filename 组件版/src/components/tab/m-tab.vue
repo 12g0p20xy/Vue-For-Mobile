@@ -40,7 +40,7 @@ export default {
 
       // 用 $slots.default 访问到所有未命名的插槽
       // ！注意：因为未命名的 $slots.default 不仅仅包括我们需要的 tabcon，需要先判断是否是元素，过滤出 tabcon
-      const tabconArray = this.$slots.default.filter(function(el) {
+      let tabconArray = this.$slots.default.filter(function(el) {
         return el.elm.nodeType === 1
       })
 

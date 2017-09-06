@@ -1,3 +1,4 @@
+// 组件
 Vue.component('m-message', {
   template: `
     <div class="m-message" @click="open">
@@ -78,11 +79,57 @@ Vue.component('m-message', {
   }
 })
 
-new Vue({
-  el: '#app',
+// 路由
+const Index = Vue.extend({
+  template: '#index',
+  data() {
+    return {
+
+    }
+  },
   methods: {
     msgEvent() {
       console.log('执行操作')
     }
   }
+})
+
+const Game = Vue.extend({
+  template: '#game'
+})
+
+const Rule = Vue.extend({
+  template: '#rule'
+})
+
+const Rank = Vue.extend({
+  template: '#rank'
+})
+
+const router = new VueRouter({
+  routes: [
+    { path: '/', component: Index },
+    { path: '/index', component: Index },
+    { path: '/game', component: Game },
+    { path: '/rule', component: Rule },
+    { path: '/rank', component: Rank }
+  ]
+})
+
+// vuex
+// const store = new Vuex.Store({
+//   // store 的变量
+//   state: {
+    
+//   },
+//   // store 的方法
+//   mutations: {
+    
+//   }
+// })
+
+
+new Vue({
+  el: '#app',
+  router
 })

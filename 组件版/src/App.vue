@@ -1,14 +1,11 @@
 <template>
   <div id="app">
-
     <!-- 页面内容 -->
     <div class="wrap">
       <router-view></router-view>
     </div>
-
     <!-- 底部导航 -->
     <m-nav></m-nav>
-
   </div>
 </template>
 

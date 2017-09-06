@@ -127,6 +127,7 @@ export default {
         height: 45px;
         text-align: center;
         line-height: 45px;
+        cursor: pointer;
       }
     }
   }

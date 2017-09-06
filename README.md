@@ -10,17 +10,23 @@
 
 - [x] 添加自定义组件
 
-![](./demo/GIF.gif)
+- [] 添加 Vuex
 
-※ 新增【简易版】，不打包，方便修改 HTML 文件。
+![](./demo/GIF.gif)
 
 # 文档结构
 
 ![](./demo/tree.png)
 
+# 新增【简易版】
+
+不使用 Webpack 打包，方便后端直接修改 HTML 文件；
+
+【简易版】使用 Gulp 压缩，支持 ES6 语法。
+
 # 安装
 
-### 使用淘宝 NPM 镜像
+### 使用淘宝 npm 镜像
 
 建议使用淘宝 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:
 
@@ -47,7 +53,7 @@ npm run dev
 npm run build
 ```
 
-# 组件
+# 可用组件
 
 ### m-nav
 
@@ -69,6 +75,18 @@ npm run build
   @confirm="msgEvent">
   <button class="btn">Confirm</button>
 </m-message>
+```
+
+### m-slider
+
+轮播图
+
+```html
+<m-slider height="200px" ref="slider">
+  <m-slider-list v-for="list in lists" :key="list">
+    {{ list }}
+  </m-slider-list>
+</m-slider>
 ```
 
 ### m-tab
