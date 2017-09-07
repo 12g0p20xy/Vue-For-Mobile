@@ -79,7 +79,7 @@ export default {
       this.currentIndex = this.currentIndex > 0 ? this.currentIndex - 1 : this.len - 1
     },
     next() {
-      this.currentIndex = this.currentIndex < this.len - 1 ? this.currentIndex+ 1 : 0
+      this.currentIndex = this.currentIndex < this.len - 1 ? this.currentIndex + 1 : 0
     }
   }
 }
