@@ -34,11 +34,7 @@
 $ npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
-之后使用 cnpm 命令来替换 npm，将从淘宝镜像开始下载：
-
-```bash
-$ cnpm install [name]
-```
+之后使用 cnpm 命令来替换 npm，将从淘宝镜像开始下载。
 
 ### 命令行
 
