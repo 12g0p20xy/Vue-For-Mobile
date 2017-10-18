@@ -22,7 +22,11 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        // 添加 es6 支持
+        options: {
+          presets: ['es2015']
+        }
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
