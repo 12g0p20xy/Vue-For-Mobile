@@ -6,7 +6,8 @@
     <div class="slider-nav">
       <span
         v-for="(item, i) in len"
-        @click="moveTo(i)"
+        @mouseenter="moveTo(i)"
+        @mouseleave="mouseleave"
         :class="{ active: i == currentIndex }"></span>
     </div>
   </div>
@@ -31,7 +32,8 @@ export default {
     return {
       currentIndex: 0,
       listWidth: 0,
-      len: 0
+      len: 0,
+      t: null
     }
   },
   mounted() {
@@ -57,12 +59,15 @@ export default {
 
     // 设置 list 外部容器宽度，让 list 横向展开
     this.$refs.container.style.width = this.listWidth * this.len + 'px'
+
+    // 开始自动轮播
+    this.timer()
   },
   watch: {
     // 设置 container 的左位移来控制移动
     distance(val) {
       this.$refs.container.style.left = val
-      console.log(this.distance)
+      // console.log(this.distance)
     }
   },
   computed: {
@@ -74,12 +79,24 @@ export default {
   methods: {
     moveTo(i) {
       this.currentIndex = i
+      clearInterval(this.t)
+    },
+    mouseleave() {
+      this.t = setInterval(() => {
+        this.next()
+      }, 1500)
     },
     prev() {
       this.currentIndex = this.currentIndex > 0 ? this.currentIndex - 1 : this.len - 1
     },
     next() {
       this.currentIndex = this.currentIndex < this.len - 1 ? this.currentIndex + 1 : 0
+    },
+    // 计时器
+    timer() {
+      this.t = setInterval(() => {
+        this.next()
+      }, 1500)
     }
   }
 }
