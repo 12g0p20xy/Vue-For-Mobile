@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "The build process of my website with Gulp.js",
   "private": true,
-  "author": "monad",
+  "author": "monad <12g0p20xy@gmail.com>",
   "devDependencies": {
     "babel-preset-env": "^1.6.0",
     "gulp-babel": "^7.0.0",

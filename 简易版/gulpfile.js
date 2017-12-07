@@ -42,7 +42,7 @@ gulp.task('minify-css', ['less'], function() {
 gulp.task('minify-js', function() {
     return gulp.src('js/global.js')
         .pipe(babel({
-            presets: ['env']
+          presets: ['env']
         }))
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
